@@ -13,7 +13,7 @@ data <- read.csv("activity.csv")
 ```{r}
 library(ggplot2)
 total.steps <- tapply(data$steps, data$date, FUN=mean, na.rm=TRUE)
-barplot(total.steps, xlab="total number of steps taken each day")
+barplot(total.steps, xlab="Mean total number of steps taken each day")
 mean(total.steps, na.rm=TRUE)
 median(total.steps, na.rm=TRUE)
 ```
